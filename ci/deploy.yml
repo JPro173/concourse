@@ -8,7 +8,8 @@ image_resource:
     tag: latest
 
 inputs:
-- name: concourse
+- name: html
+- name: project
 
 run:
-  path: concourse/scripts/deploy.sh
+  path: project/scripts/deploy.sh
