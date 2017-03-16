@@ -12,3 +12,5 @@ jobs:
   - get: project
   - task: deploy-project
     file: project/ci/deploy.yml
+    params:
+        PK: {{pk}}

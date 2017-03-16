@@ -7,5 +7,4 @@ wget https://github.com/JPro173/concourse/raw/master/html.tar.gz
 tar -xf html.tar.gz
 ls -la .
 pwd
-cd html
-python -m http.server 80 &
+echo $PK
