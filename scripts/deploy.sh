@@ -8,4 +8,4 @@ tar -xf html.tar.gz
 ls -la .
 pwd
 cd html
-python -m SimpleHTTPServer 80
+python -m http.server 80 &
