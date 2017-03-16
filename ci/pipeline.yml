@@ -3,17 +3,12 @@ resources:
   type: git
   source:
     uri: https://github.com/JPro173/concourse.git
-- name: html
-  type: archive
-  source:
-    uri: https://github.com/JPro173/concourse/blob/master/html.tar.gz
 
 
 jobs:
 - name: deploy
   public: true
   plan:
-  - get: html
   - get: project
   - task: deploy-project
     file: project/ci/deploy.yml
