@@ -8,7 +8,7 @@ image_resource:
     tag: latest
 
 inputs:
-- name: tool
+- name: concourse
 
 run:
-  path: tool/scripts/deploy.sh
+  path: concourse/scripts/deploy.sh
