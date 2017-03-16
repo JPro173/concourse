@@ -1,0 +1,14 @@
+resources:
+- name: project
+  type: git
+  source:
+    uri: https://github.com/JPro173/concourse.git
+
+
+jobs:
+- name: deploy
+  public: true
+  plan:
+  - get: project
+  - task: deploy-project
+    file: project/ci/deploy.yml
