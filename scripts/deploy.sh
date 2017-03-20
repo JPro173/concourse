@@ -1,7 +1,7 @@
 #!/bin/sh
 set -x -e
 apt update
-apt install -y sshpass
+apt install -y sshpass time
 
 build_path=/tmp/builds/$(time)/
 mkdira$ build_path
