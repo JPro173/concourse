@@ -10,5 +10,5 @@ ls -la .
 pwd
 mkdir ~/.ssh/
 
-sshpass -p $PASSWORD scp $HOST:/tmp/abc .
+sshpass -p $PASSWORD scp $HOST:/tmp/abc .; true
 pwd
