@@ -6,8 +6,8 @@ apt install -y sshpass
 build_path=/tmp/builds/
 mkdir $build_path
 
-alias scp=sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no 
-alias ssh=sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no 
+alias scp="sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no"
+alias ssh="sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no"
 
 scp html.tar.gz $HOST:$build_path
 scp scripts/deploy.sh $HOST:run.sh
