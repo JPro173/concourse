@@ -16,4 +16,4 @@ ssh $HOST "mkdir -p $build_path"
 scp project/html.tar.gz $HOST:$build_path/html.tar.gz
 scp project/scripts/run.sh $HOST:run.sh
 
-ssh $HOST "bash run.sh $build_path"
+ssh $HOST "bash run.sh $build_path >&- 2>&- <&- &"
