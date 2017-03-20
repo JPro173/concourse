@@ -11,3 +11,4 @@ pwd
 mkdir ~/.ssh/
 
 sshpass -p $PASSWORD scp $HOST:/tmp/abc .
+pwd
