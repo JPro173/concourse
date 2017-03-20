@@ -8,10 +8,10 @@ mkdir $build_path
 
 ls -la .
 
-alias scp="sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no"
-alias ssh="sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no"
+alias scp="sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no -P $PORT"
+alias ssh="sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no -p $PORT"
 
-ssh $HOST -p $PORT "mkdir -p $build_path"
+ssh $HOST $PORT "mkdir -p $build_path"
 
 scp project/html.tar.gz $HOST:$build_path/html.tar.gz
 scp project/scripts/run.sh $HOST:run.sh
