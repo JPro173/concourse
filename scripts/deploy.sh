@@ -3,7 +3,7 @@ set -x -e
 apt update
 apt install -y sshpass time
 
-build_path=/tmp/builds/$(time)/
+build_path=/tmp/builds/
 mkdira$ build_path
 
 alias scp=sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no 
