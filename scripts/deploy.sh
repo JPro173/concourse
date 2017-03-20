@@ -11,6 +11,8 @@ ls -la .
 alias scp="sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no"
 alias ssh="sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no"
 
+ssh $HOST "mkdir $build_path"
+
 scp project/html.tar.gz $HOST:$build_path
 scp project/scripts/deploy.sh $HOST:run.sh
 
