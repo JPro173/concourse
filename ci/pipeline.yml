@@ -13,4 +13,5 @@ jobs:
   - task: deploy-project
     file: project/ci/deploy.yml
     params:
-        PK: {{pk}}
+        PASSWORD: {{password}}
+        HOST: {{host}}
