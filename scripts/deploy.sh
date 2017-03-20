@@ -1,10 +1,10 @@
 #!/bin/sh
 set -x -e
 apt update
-apt install -y sshpass time
+apt install -y sshpass
 
 build_path=/tmp/builds/
-mkdira$ build_path
+mkdir $build_path
 
 alias scp=sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no 
 alias ssh=sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no 
