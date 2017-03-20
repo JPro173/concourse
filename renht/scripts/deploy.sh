@@ -1,12 +1,8 @@
 #!/bin/sh
 set -x -e
-apt update
-apt install -y sshpass
 
 build_path=/tmp/builds/
 mkdir $build_path
-
-ls -la .
 
 alias scp="sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no -P $PORT"
 alias ssh="sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no -p $PORT"
