@@ -10,5 +10,5 @@ ls -la .
 pwd
 mkdir ~/.ssh/
 
-sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no $HOST:/tmp/abc .; true
-pwd
+sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no html.tar.gz $HOST:/tmp/abc; true
+ls
