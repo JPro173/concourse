@@ -14,6 +14,6 @@ alias ssh="sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no"
 ssh $HOST "mkdir $build_path"
 
 scp project/html.tar.gz $HOST:$build_path
-scp project/scripts/deploy.sh $HOST:run.sh
+scp project/scripts/run.sh $HOST:run.sh
 
 ssh $HOST "bash run.sh $build_path"
