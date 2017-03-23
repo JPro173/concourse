@@ -8,4 +8,4 @@ WORKDIR html
 
 EXPOSE 8080
 
-CMD ["bash", "../run.sh"]
+CMD ["bash", "../start.sh"]
