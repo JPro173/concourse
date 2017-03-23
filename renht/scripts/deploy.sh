@@ -16,4 +16,4 @@ scp project/renht/scripts/run.sh $HOST:$build_path/run.sh
 scp project/renht/docker/start.sh $HOST:$build_path/start.sh
 scp project/renht/docker/Dockerfile $HOST:$build_path/Dockerfile
 
-ssh $HOST 'bash run.sh $build_path >/tmp/output 2>/tmp/errors <&- &'
+ssh $HOST 'bash /tmp/builds/run.sh'

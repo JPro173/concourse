@@ -1,3 +1,4 @@
 docker build /tmp/builds/
 docker stop prod
-docker run -name prod -dit -p 8080 $(docker ps -l -q)
+docker rm prod
+docker run -name prod -dit -p 8080 $(docker images --format "{{.ID}}" | head -n 1)
