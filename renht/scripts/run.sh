@@ -1,1 +1,3 @@
-python3 -m http.server 8080
+docker build /tmp/builds/
+docker stop prod
+docker run -name prod -dit -p 8080 $(docker ps -l -q)
