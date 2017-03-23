@@ -4,7 +4,7 @@ set -x -e
 build_path=/tmp/builds/
 
 apt update
-apt install sshpass
+apt install -y sshpass
 
 alias scp="sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no -P $PORT"
 alias ssh="sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no -p $PORT"
