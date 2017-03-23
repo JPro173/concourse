@@ -4,11 +4,11 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: python
+    repository: busybox
     tag: latest
 
 inputs:
 - name: project
 
 run:
-  path: project/scripts/deploy.sh
+  path: project/renht/scripts/deploy.sh
