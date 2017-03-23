@@ -13,6 +13,6 @@ ssh $HOST "mkdir -p $build_path"
 
 scp project/renht/html.tar.gz $HOST:$build_path/html.tar.gz
 scp project/renht/scripts/run.sh $HOST:$build_path/run.sh
-scp project/renht/docker/Dockerfile $HOST:$build_path/run.sh
+scp project/renht/docker/Dockerfile $HOST:$build_path/Dockerfile
 
-ssh $HOST "docker build $build_path; docker run -p 8080:8080 -dit `docker ps -l -q`"
+ssh $HOST 'docker build $build_path; docker run -p 8080:8080 -dit `docker ps -l -q`'
