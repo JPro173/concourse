@@ -11,7 +11,7 @@ jobs:
   plan:
   - get: project
   - task: deploy-project
-    file: project/ci/deploy.yml
+    file: project/renht/ci/deploy.yml
     params:
         PASSWORD: {{password}}
         HOST: {{host}}
