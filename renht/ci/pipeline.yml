@@ -6,12 +6,18 @@ resources:
 
 
 jobs:
+- name: build
+  public: true
+  plan:
+  - get: project
+  - task: build-project
+    file: project/renht/ci/tasks/build.yml
 - name: deploy
   public: true
   plan:
   - get: project
   - task: deploy-project
-    file: project/renht/ci/deploy.yml
+    file: project/renht/ci/tasks/deploy.yml
     params:
         PASSWORD: {{password}}
         HOST: {{host}}

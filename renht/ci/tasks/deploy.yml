@@ -1,0 +1,15 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: python
+    tag: latest
+
+inputs:
+- name: project
+- name: artifact
+
+run:
+  path: project/renht/ci/scripts/deploy.sh

@@ -10,5 +10,8 @@ image_resource:
 inputs:
 - name: project
 
+ouptputs:
+- name: artifact
+
 run:
-  path: project/renht/scripts/deploy.sh
+  path: project/renht/ci/scripts/build.sh
