@@ -18,7 +18,7 @@ echo ${PK} > ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 chmod 700 ~/.ssh/
 
-./add-pk.sh ~/.ssh/id_rsa aa
+./ci/scripts/add-pk.sh ~/.ssh/id_rsa aa
 
 echo "[+] Done\n"
 
