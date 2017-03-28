@@ -6,7 +6,7 @@ build_path=/tmp/builds/
 echo "[+] Installing dependencies"
 
 apt update
-apt install -y expect
+apt install -y expect ssh
 
 echo "[+] Done\n"
 
