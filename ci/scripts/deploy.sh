@@ -20,7 +20,7 @@ cat ~/.ssh/id_rsa
 ls -la -R ~
 
 chmod 600 ~/.ssh/id_rsa
-chmod 700 ~/.ssh/
+chmod -R 700 ~/.ssh/
 chmod 700 ~
 
 echo "[+] Done\n"
