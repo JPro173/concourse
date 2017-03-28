@@ -19,6 +19,7 @@ chmod 600 ~/.ssh/id_rsa
 chmod 700 ~/.ssh/
 
 echo $PASSWORD > /tmp/passphrase
+cat /tmp/passphrase
 echo $PASSWORD
 ./project/ci/scripts/add-pk.sh ~/.ssh/id_rsa /tmp/passphrase
 
