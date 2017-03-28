@@ -17,11 +17,11 @@ echo $PK > ~/.ssh/id_rsa
 
 cat ~/.ssh/id_rsa
 
+ls -la -R ~
+
 chmod 600 ~/.ssh/id_rsa
 chmod 700 ~/.ssh/
-
-echo $PASSWORD > /tmp/passphrase
-./project/ci/scripts/add-pk.sh ~/.ssh/id_rsa /tmp/passphrase
+chmod 700 ~
 
 echo "[+] Done\n"
 
