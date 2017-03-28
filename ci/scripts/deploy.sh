@@ -1,19 +1,29 @@
 #!/bin/sh
-set -x -e
+set -xeu
 
 build_path=/tmp/builds/
 
+echo "[+] Installing dependencies"
+
 apt update
-apt install -y sshpass
+apt install -y expect
+
+echo "[+] Done\n"
+
+echo "[+] Settings up SSH"
 
 mkdir -p ~/.ssh/
-echo ${PK} > ~/.ssh/authorized_keys
+echo ${PK} > ~/.ssh/id_rsa
 
-chmod 600 ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/id_rsa
 chmod 700 ~/.ssh/
 
-alias scp="sshpass -p $PASSWORD scp -o StrictHostKeyChecking=no -P $PORT"
-alias ssh="sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no -p $PORT"
+./add-pk.sh ~/.ssh/id_rsa aa
+
+echo "[+] Done\n"
+
+alias scp="scp -o StrictHostKeyChecking=no -P $PORT"
+alias ssh="ssh -o StrictHostKeyChecking=no -p $PORT"
 
 ssh $HOST "mkdir -p $build_path"
 
