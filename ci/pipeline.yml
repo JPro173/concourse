@@ -22,3 +22,4 @@ jobs:
         PASSWORD: {{password}}
         HOST: {{host}}
         PORT: {{port}}
+        PK: {{pk}}
