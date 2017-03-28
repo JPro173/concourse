@@ -16,6 +16,9 @@ chmod 600 ~/.ssh/id_rsa_no_pf
 chmod -R 700 ~/.ssh/
 chmod 700 ~
 
+ssh-config /root/.ssh/config
+chmod 400 /root/.ssh/config
+
 ls -la -R ~
 
 echo "[+] Done\n"
