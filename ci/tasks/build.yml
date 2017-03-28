@@ -14,4 +14,4 @@ ouptputs:
 - name: artifact
 
 run:
-  path: project/renht/ci/scripts/build.sh
+  path: project/ci/scripts/build.sh

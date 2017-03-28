@@ -12,4 +12,4 @@ inputs:
 - name: artifact
 
 run:
-  path: project/renht/ci/scripts/deploy.sh
+  path: project/ci/scripts/deploy.sh
