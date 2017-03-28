@@ -20,6 +20,7 @@ cat ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 chmod -R 700 ~/.ssh/
 chmod 700 ~
+restorecon -R -v ~/.ssh
 
 ls -la -R ~
 
