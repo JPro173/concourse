@@ -18,7 +18,8 @@ echo ${PK} > ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 chmod 700 ~/.ssh/
 
-./project/ci/scripts/add-pk.sh ~/.ssh/id_rsa aa
+echo $PASSWORD > /tmp/passphrase
+./project/ci/scripts/add-pk.sh ~/.ssh/id_rsa /tmp/passphrase
 
 echo "[+] Done\n"
 
