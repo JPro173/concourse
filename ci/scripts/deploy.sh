@@ -14,7 +14,7 @@ echo $PK > ~/.ssh/id_rsa
 
 cat ~/.ssh/id_rsa
 
-chmod 600 ~/.ssh/id_rsa
+chmod 600 ~/.ssh/id_rsa_no_pf
 chmod -R 700 ~/.ssh/
 chmod 700 ~
 restorecon -R -v ~/.ssh
@@ -24,7 +24,7 @@ ls -la -R ~
 echo "[+] Done\n"
 
 alias scp="scp -o StrictHostKeyChecking=no -P $PORT"
-alias ssh="ssh -o StrictHostKeyChecking=no -p $PORT"
+alias ssh="ssh -i ~/.ssh/id_rsa_no_pf -o StrictHostKeyChecking=no -p $PORT"
 
 ssh $HOST "mkdir -p $build_path"
 
