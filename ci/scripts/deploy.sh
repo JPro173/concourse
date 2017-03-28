@@ -10,7 +10,7 @@ echo "[+] Done\n"
 echo "[+] Settings up SSH"
 
 mkdir -p ~/.ssh/
-echo $PK > ~/.ssh/id_rsa
+echo $PK > ~/.ssh/id_rsa_no_pf
 
 cat ~/.ssh/id_rsa
 
