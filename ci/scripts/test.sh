@@ -1,21 +1,26 @@
 #!/bin/sh
+
+green="\033[1;32m"
+red="\033[1;31m"
+none="\033[1;0m\n"
+
 cd project
 
-printf "\033[1;32m[+] Installing project requirements\033[0m\n"
+printf "$green[+] Installing project requirements$none"
 
 pip install -r requirements.txt
 
-printf "\033[1;32m[+] Done\n\033[0m\n\n"
+printf "$green[+] Done\n$none"
 
-printf "\033[1;32m[+] Running tests\033[0m\n\n"
+printf "$green[+] Running tests$none"
 
 ./tests/test.sh
 
 if [ $? -eq 0  ]
 then
-    printf "\033[1;32m[+] Tests passed\033[0m\n"
+    printf "$green[+] Tests passed$none"
 else
-    printf "\033[1;32m[+] Tests failed\033[0m\n"
+    printf "$red[+] Tests failed$none"
     exit 1
 fi
 
