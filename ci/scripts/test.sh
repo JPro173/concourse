@@ -11,4 +11,7 @@ printf "\033[1;32m[+] Running tests\033[0m\n\n"
 
 ./tests/test.sh
 
+if [ $? != 0  ]
+    exit $?
+
 printf "\033[1;32m[+] Tests passed\033[0m\n"

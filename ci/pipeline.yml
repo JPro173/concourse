@@ -16,11 +16,10 @@ jobs:
     file: project/ci/tasks/build.yml
   - task: deploy
     file: project/ci/tasks/deploy.yml
-  - task: smoke-test
-    file: project/ci/tasks/smoke_test.yml
-  - task: release
     params:
         PASSWORD: {{password}}
         HOST: {{host}}
         PORT: {{port}}
         PK: {{pk}}
+  - task: smoke-test
+    file: project/ci/tasks/smoke_test.yml
