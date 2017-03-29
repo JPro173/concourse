@@ -1,13 +1,9 @@
 #!/bin/sh
-set -xeu
+set -eu
 
 build_path=/tmp/builds/
 
-"[+] Installing dependencies"
-
-"[+] Done\n"
-
-"[+] Settings up SSH"
+echo "[+] Settings up SSH"
 
 mkdir -p ~/.ssh/
 echo "$PK" > /root/.ssh/id_rsa
