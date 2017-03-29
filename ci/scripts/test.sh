@@ -11,8 +11,11 @@ printf "\033[1;32m[+] Running tests\033[0m\n\n"
 
 ./tests/test.sh
 
-if [ $? != 0  ] then
+if [ $? -eq 0  ]
+then
+    printf "\033[1;32m[+] Tests passed\033[0m\n"
+else
+    printf "\033[1;32m[+] Tests failed\033[0m\n"
     exit $?
 fi
 
-printf "\033[1;32m[+] Tests passed\033[0m\n"
