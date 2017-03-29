@@ -16,8 +16,8 @@ echo "[+] Settings up SSH"
 
 pwd
 mkdir -p ~/.ssh/
-echo $PK > /root/.ssh/id_rsa_no_pf
-echo $PBK > /root/.ssh/id_rsa_no_pf.pub
+echo "$PK" > /root/.ssh/id_rsa_no_pf
+echo "$PBK" > /root/.ssh/id_rsa_no_pf.pub
 
 chmod 600 ~/.ssh/id_rsa_no_pf
 chmod 600 ~/.ssh/id_rsa_no_pf.pub
