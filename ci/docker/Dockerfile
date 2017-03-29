@@ -1,10 +1,10 @@
 FROM python:3.6
 
+WORKDIR project
+
 ADD . .
 
 RUN tar -xf project.tar.gz
-
-WORKDIR project
 
 EXPOSE 8080
 
