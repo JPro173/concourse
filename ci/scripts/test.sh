@@ -20,7 +20,7 @@ if [ $? -eq 0  ]
 then
     printf "$green[+] Tests passed$none"
 else
-    printf "$red[+] Tests failed$none"
+    printf "$red[!] Tests failed$none"
     exit 1
 fi
 

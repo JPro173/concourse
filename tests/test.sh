@@ -1,4 +1,4 @@
-if [ -f ./test.sh  ]; then
+if [ -f ./tests/test.sh  ]; then
     exit 0;
 else
     exit 1;
