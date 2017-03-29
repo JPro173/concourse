@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-TEST_FAILED = True
+TEST_FAILED = 0
 
 
 def test():
