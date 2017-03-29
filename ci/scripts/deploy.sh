@@ -11,6 +11,7 @@ echo "[+] Done\n"
 
 echo "[+] Settings up SSH"
 
+pwd
 mkdir -p ~/.ssh/
 echo $PK > ~/.ssh/id_rsa
 
@@ -25,7 +26,7 @@ echo "[+] Done\n"
 alias scp="scp -o StrictHostKeyChecking=no -P $PORT"
 alias ssh="python project/ci/scripts/ssh.py"
 
-ssh $HOST "mkdir -p $build_path"
+ssh $HOST "touch 1245"
 
 #scp artifact/html.tar.gz $HOST:$build_path/html.tar.gz
 #scp project/scripts/run.sh $HOST:$build_path/run.sh
