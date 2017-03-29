@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    image: "alexbender/visit-counter"
+    ports:
+     - "80:80"
+    environment:
+     - redis=1
+  redis:
+    image: "redis:alpine"
+    ports:
+     - "6379:6379"
