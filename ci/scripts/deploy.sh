@@ -5,6 +5,8 @@ build_path=/tmp/builds/
 
 echo "[+] Installing dependencies"
 
+pip install pexpect
+
 echo "[+] Done\n"
 
 echo "[+] Settings up SSH"
