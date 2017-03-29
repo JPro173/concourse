@@ -11,6 +11,5 @@ echo "[+] Starting tests"
 
 echo "[+] Running test.sh\r"
 ./test.sh
-echo "[+] Running test.sh ... OK"
 
 echo "[+] Tests passed"
