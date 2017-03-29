@@ -6,11 +6,13 @@ resources:
 
 
 jobs:
-- name: build
+- name: deploy_project
   public: true
   plan:
   - get: project
     trigger: true
+  - task: test-project
+    file: project/ci/tasks/test.yml
   - task: build-project
     file: project/ci/tasks/build.yml
   - task: deploy-project
