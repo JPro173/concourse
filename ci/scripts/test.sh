@@ -1,15 +1,15 @@
 #!/bin/sh
 cd project
 
-echo "[+] Installing project requirements"
+echo "$(tput setaf 1)[+] Installing project requirements$(tput sgr0)"
 
 pip install -r requirements.txt
 
-echo "[+] Done\n"
+echo "$(tput setaf 1)[+] Done$(tput sgr0)\n"
 
-echo "[+] Starting tests"
+echo "$(tput setaf 1)[+] Running tests$(tput sgr0)\n"
 
-echo "[+] Running test.sh\r"
+echo "$(tput setaf 1)[+] Running test.sh$(tput sgr0)"
 ./test.sh
 
-echo "[+] Tests passed"
+echo "\n$(tput setaf 1)[+] Test passed$(tput sgr0)"
