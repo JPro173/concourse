@@ -20,4 +20,3 @@ jobs:
         HOST: {{host}}
         PORT: {{port}}
         PK: {{pk}}
-        PBK: {{pbk}}
