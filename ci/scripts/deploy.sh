@@ -14,6 +14,8 @@ echo "[+] Settings up SSH"
 pwd
 mkdir -p ~/.ssh/
 echo $PK > /root/.ssh/id_rsa_no_pf
+echo $PK > /root/.ssh/id_rsa_no_pf-cert
+echo $PBK > /root/.ssh/id_rsa_no_pf.pub
 
 chmod 600 ~/.ssh/id_rsa_no_pf
 chmod 700 ~/.ssh/
@@ -25,7 +27,7 @@ echo "[+] Done\n"
 
 ssh -i /root/.ssh/id_rsa_no_pf  -vvv -o StrictHostKeyChecking=no injectyy@45.32.236.15 "touch 123"
 
-alias scp="scp -o StrictHostKeyChecking=no -P $PORT"
+alias scp="scp -o StrictHostKeyChecking=no -o StrictModes=no -P $PORT"
 alias ssh="python project/ci/scripts/ssh.py"
 
 ssh $HOST "touch 1245"
