@@ -3,7 +3,7 @@ mkdir -p artifact
 
 cd project
 
-tar -zcvf project.tar.gz app.py test.sh requeirements.txt
+tar -zcvf project.tar.gz app.py test.sh requirements.txt
 
 cd ..
 
