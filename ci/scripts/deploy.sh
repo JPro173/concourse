@@ -21,7 +21,7 @@ chmod 600 ~/.ssh/id_rsa_no_pf.pub
 chmod 700 ~/.ssh/
 chmod 700 ~
 
-ls -la -R ~
+cat /etc/ssh/ssh_host_rsa_key
 
 echo "[+] Done\n"
 
