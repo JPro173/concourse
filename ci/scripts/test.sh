@@ -1,15 +1,15 @@
 #!/bin/sh
 cd project
 
-echo "$(tput setaf 1)[+] Installing project requirements$(tput sgr0)"
+echo "\033[31m][+] Installing project requirements\x1B[0m]"
 
 pip install -r requirements.txt
 
-echo "$(tput setaf 1)[+] Done$(tput sgr0)\n"
+echo "\033[31m][+] Done\x1B[0m]\n"
 
-echo "$(tput setaf 1)[+] Running tests$(tput sgr0)\n"
+echo "\033[31m][+] Running tests\x1B[0m]\n"
 
-echo "$(tput setaf 1)[+] Running test.sh$(tput sgr0)"
+echo "\033[31m][+] Running test.sh\x1B[0m]"
 ./test.sh
 
-echo "\n$(tput setaf 1)[+] Test passed$(tput sgr0)"
+echo "\n\033[31m][+] Test passed\x1B[0m]"
