@@ -9,8 +9,8 @@ echo "[+] Done\n"
 
 echo "[+] Starting tests"
 
-echo "[+] Running test.sh"
+echo "[+] Running test.sh\r"
 ./test.sh
-echo "\r[+] Running test.sh ... OK"
+echo "[+] Running test.sh ... OK"
 
 echo "[+] Tests passed"
