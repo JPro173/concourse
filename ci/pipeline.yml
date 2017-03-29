@@ -6,17 +6,19 @@ resources:
 
 
 jobs:
-- name: deploy_project
-  public: true
+- name: deploy-project
   plan:
   - get: project
     trigger: true
-  - task: test-project
+  - task: test
     file: project/ci/tasks/test.yml
-  - task: build-project
+  - task: build
     file: project/ci/tasks/build.yml
-  - task: deploy-project
+  - task: deploy
     file: project/ci/tasks/deploy.yml
+  - task: smoke-test
+    file: project/ci/tasks/smoke_test.yml
+  - task: release
     params:
         PASSWORD: {{password}}
         HOST: {{host}}
