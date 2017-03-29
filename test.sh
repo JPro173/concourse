@@ -1,6 +1,6 @@
 if [ -f ./test.sh  ]; then
-    echo 1;
+    exit 0;
 else
-    echo 0;
+    exit 1;
 fi
 

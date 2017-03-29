@@ -19,7 +19,7 @@ alias ssh="ssh -o StrictHostKeyChecking=no -p $PORT $HOST"
 
 ssh "mkdir -p $build_path"
 
-scp artifact/html.tar.gz $HOST:$build_path/html.tar.gz
+scp artifact/project.tar.gz $HOST:$build_path/project.tar.gz
 scp project/ci/scripts/run.sh $HOST:$build_path/run.sh
 scp project/ci/docker/start.sh $HOST:$build_path/start.sh
 scp project/ci/docker/Dockerfile $HOST:$build_path/Dockerfile

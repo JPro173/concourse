@@ -3,8 +3,8 @@ mkdir -p artifact
 
 cd project
 
-tar -zcvf html.tar.gz html
+tar -zcvf project.tar.gz app.py test.py
 
 cd ..
 
-mv project/html.tar.gz artifact/
+mv project/project.tar.gz artifact/

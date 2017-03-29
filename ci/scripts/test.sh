@@ -9,6 +9,6 @@ echo "[+] Done\n"
 
 echo "[+] Starting tests"
 
-python test.py
+./test.sh
 
 echo "[+] Tests passed"
