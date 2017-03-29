@@ -8,7 +8,7 @@ echo "[+] Installing dependencies"
 pip install pexpect
 
 apt update
-apt install ssh openssl
+apt install -y ssh openssl
 
 echo "[+] Done\n"
 
