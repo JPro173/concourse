@@ -16,6 +16,6 @@ then
     printf "\033[1;32m[+] Tests passed\033[0m\n"
 else
     printf "\033[1;32m[+] Tests failed\033[0m\n"
-    exit $?
+    exit 1
 fi
 
