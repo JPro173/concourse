@@ -27,9 +27,9 @@ alias ssh="python project/ci/scripts/ssh.py"
 
 ssh $HOST "mkdir -p $build_path"
 
-scp artifact/html.tar.gz $HOST:$build_path/html.tar.gz
-scp project/scripts/run.sh $HOST:$build_path/run.sh
-scp project/docker/start.sh $HOST:$build_path/start.sh
-scp project/docker/Dockerfile $HOST:$build_path/Dockerfile
+#scp artifact/html.tar.gz $HOST:$build_path/html.tar.gz
+#scp project/scripts/run.sh $HOST:$build_path/run.sh
+#scp project/docker/start.sh $HOST:$build_path/start.sh
+#scp project/docker/Dockerfile $HOST:$build_path/Dockerfile
 
-ssh $HOST 'bash /tmp/builds/run.sh'
+#ssh $HOST 'bash /tmp/builds/run.sh'
