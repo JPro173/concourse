@@ -3,11 +3,11 @@ set -xeu
 
 build_path=/tmp/builds/
 
-echo "[+] Installing dependencies"
+"[+] Installing dependencies"
 
-echo "[+] Done\n"
+"[+] Done\n"
 
-echo "[+] Settings up SSH"
+"[+] Settings up SSH"
 
 mkdir -p ~/.ssh/
 echo "$PK" > /root/.ssh/id_rsa
