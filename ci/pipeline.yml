@@ -17,14 +17,11 @@ jobs:
   plan:
   - get: project
     trigger: true
-  - get: build-artifact
-    params:
-      skip_download: true
   - task: build
     file: project/ci/tasks/build.yml
   - put: build-artifact
     params:
-      build: build-artifact
+      build: ../artifact
       cache: true
   - task: deploy
     file: project/ci/tasks/deploy.yml

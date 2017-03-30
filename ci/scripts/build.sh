@@ -2,10 +2,8 @@
 
 set -eux
 
-rm -rf build-artifact
+cp -r project artifact
 
-cp -r project build-artifact
-
-cd build-artifact
+cd artifact
 pwd
 ls -lah
