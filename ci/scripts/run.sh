@@ -1,7 +1,13 @@
-printf "\033[1;34m[+] Building docker image\033[0m\n"
-docker build /tmp/builds/
-docker stop prod > /dev/null 2>&1
-docker rm prod > /dev/null 2>&1
-printf "\033[1;34m[+] Running docker container\033[0m\n"
-docker run --name prod -d -p 8080:8080 $(docker images --format "{{.ID}}" | head -n 1) > /dev/null 2>&1
-printf "\033[1;34m[+] Container is running\033[0m\n"
+blue="\033[1;34m"
+red="\033[1;31m"
+none="\033[1;0m\n"
+
+printf "$blue[+] Running docker image$none"
+docker run -p 8080:8080 -d injectyy/counter:latest
+if [ $? -eq 0  ]
+then
+    printf "$blue[+]Done$none"
+else
+    printf "$red[!] Deploy failed$none"
+    exit 1
+fi

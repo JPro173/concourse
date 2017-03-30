@@ -5,6 +5,7 @@ from redis import Redis
 
 app = Flask(__name__)
 
+PORT = os.getenv('PORT')
 
 class Database:
     data = defaultdict(int)
@@ -29,4 +30,4 @@ def hello():
     return 'Hello World! I have been seen {} times.\n'.format(count)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080, debug=True)
+     app.run(host="0.0.0.0", port=PORT, debug=True)

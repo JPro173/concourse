@@ -24,10 +24,7 @@ alias ssh="ssh -o StrictHostKeyChecking=no -p $PORT $HOST"
 
 printf "$green[+] Transporting files on server$none"
 ssh "mkdir -p $build_path"
-scp artifact/project.tar.gz $HOST:$build_path/project.tar.gz
 scp project/ci/scripts/run.sh $HOST:$build_path/run.sh
-scp project/ci/docker/start.sh $HOST:$build_path/start.sh
-scp project/ci/docker/Dockerfile $HOST:$build_path/Dockerfile
 printf "$green[+] Done\n$none"
 
 printf "$green[+] Deploying$none"
