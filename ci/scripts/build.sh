@@ -2,8 +2,6 @@
 
 set -eux
 
-mkdir artifact
-
 cp -fr project/* artifact
 
 cd artifact
