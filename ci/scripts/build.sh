@@ -2,8 +2,8 @@
 
 set -eux
 
-cp -fr project/* artifact
+cp -fr project/* build-artifact
 
-cd artifact
+cd build-artifact
 pwd
 ls -lah

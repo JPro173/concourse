@@ -10,8 +10,5 @@ image_resource:
 inputs:
 - name: project
 
-outputs:
-- name: artifact
-
 run:
   path: project/ci/scripts/build.sh

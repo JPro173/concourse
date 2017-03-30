@@ -17,11 +17,12 @@ jobs:
   plan:
   - get: project
     trigger: true
+  - get: build-artifact
   - task: build
     file: project/ci/tasks/build.yml
   - put: build-artifact
     params:
-      build: artifact
+      build: build-artifact
       cache: true
   - task: deploy
     file: project/ci/tasks/deploy.yml
