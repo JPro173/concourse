@@ -2,7 +2,7 @@
 
 set -eux
 
-file build-artifact
+mkdir build-artifact
 
 cp -fr project/* build-artifact
 
