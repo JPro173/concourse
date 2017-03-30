@@ -7,3 +7,4 @@ cp -fr project/* artifact
 cd artifact
 pwd
 ls -lah
+cat app.py
