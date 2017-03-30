@@ -7,13 +7,14 @@ docker pull injectyy/counter:latest
 printf "$blue[+] Done$none"
 
 printf "$blue[+] Stopping old container$none"
-docker stop prod > /dev/null 2>&1
-docker rename prod prod_last
+docker stop project_prod_1 > /dev/null 2>&1
+docker rename project_prod_1 prod_last
+docker rm project_prod_1 > /dev/null 2>&1
 printf "$blue[+] Done$none"
 
 printf "$blue[+] Running docker image$none"
 
-docker run --name prod -p 8080:8080 -d injectyy/counter:latest
+docker-compose up
 if [ $? -eq 0  ]
 then
     printf "$blue[+]Done$none"
