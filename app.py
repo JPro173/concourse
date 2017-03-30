@@ -5,7 +5,7 @@ from redis import Redis
 
 app = Flask(__name__)
 
-PORT = os.getenv('PORT')
+PORT = int(os.getenv('PORT'))
 
 class Database:
     data = defaultdict(int)
