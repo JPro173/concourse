@@ -9,7 +9,6 @@ image_resource:
 
 inputs:
 - name: project
-- name: artifact
 
 run:
   path: project/ci/scripts/deploy.sh
