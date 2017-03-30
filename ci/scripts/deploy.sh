@@ -22,7 +22,7 @@ alias scp="scp -o StrictHostKeyChecking=no -P $PORT"
 alias ssh="ssh -o StrictHostKeyChecking=no -p $PORT $HOST"
 
 
-printf "$green[+] Transporting files on server$red"
+printf "$green[+] Transporting files on server$none"
 ssh "mkdir -p $build_path"
 scp artifact/project.tar.gz $HOST:$build_path/project.tar.gz
 scp project/ci/scripts/run.sh $HOST:$build_path/run.sh
