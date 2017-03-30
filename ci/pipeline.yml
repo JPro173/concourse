@@ -17,14 +17,12 @@ jobs:
   plan:
   - get: project
     trigger: true
-  - get: build-artifact
   - task: test
     file: project/ci/tasks/test.yml
+  - get: build-artifact
   - task: build
     file: project/ci/tasks/build.yml
   - put: build-artifact
-    params:
-      tag: latest
   - task: deploy
     file: project/ci/tasks/deploy.yml
     params:
