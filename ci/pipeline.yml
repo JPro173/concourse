@@ -23,7 +23,6 @@ jobs:
   - put: build-artifact
     params:
       build: artifact
-      cache: true
   - task: deploy
     file: project/ci/tasks/deploy.yml
     params:
