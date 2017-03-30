@@ -17,11 +17,9 @@ jobs:
   plan:
   - get: project
     trigger: true
-  - task: build
-    file: project/ci/tasks/build.yml
   - put: build-artifact
     params:
-      build: artifact
+      build: project
   - task: deploy
     file: project/ci/tasks/deploy.yml
     params:
