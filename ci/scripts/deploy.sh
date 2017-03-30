@@ -25,6 +25,7 @@ alias ssh="ssh -o StrictHostKeyChecking=no -p $PORT $HOST"
 printf "$green[+] Transporting files on server$none"
 ssh "mkdir -p $build_path"
 scp project/ci/scripts/run.sh $HOST:$build_path/run.sh
+scp project/docker-compose.yml $HOST:$build_path/docker-compose.yml
 printf "$green[+] Done\n$none"
 
 printf "$green[+] Deploying$none"

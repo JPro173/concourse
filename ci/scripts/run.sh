@@ -14,6 +14,7 @@ printf "$blue[+] Done$none"
 
 printf "$blue[+] Running docker image$none"
 
+cd /tmp/builds/
 docker-compose up
 if [ $? -eq 0  ]
 then
