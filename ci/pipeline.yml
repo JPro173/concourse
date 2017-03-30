@@ -3,6 +3,13 @@ resources:
   type: git
   source:
     uri: https://github.com/JPro173/concourse.git
+- name: build-artifact
+  type: docker-image
+  source:
+    repository: injectyy/counter
+    username: injectyy
+    password: {{ pk }}
+    tag: latest
 
 
 jobs:
@@ -12,6 +19,9 @@ jobs:
     trigger: true
   - task: test
     file: project/ci/tasks/test.yml
+  - put: build-artifact
+    params:
+      tag: latest
   - task: build
     file: project/ci/tasks/build.yml
   - task: deploy
@@ -20,6 +30,5 @@ jobs:
         PASSWORD: {{password}}
         HOST: {{host}}
         PORT: {{port}}
-        PK: {{pk}}
   - task: smoke-test
     file: project/ci/tasks/smoke_test.yml
