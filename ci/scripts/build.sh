@@ -2,9 +2,7 @@
 
 set -eux
 
-rm -rf artifact
-
-cp -r project artifact
+cp -ar project artifact
 
 cd artifact
 pwd
