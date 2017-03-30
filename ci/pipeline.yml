@@ -17,7 +17,6 @@ jobs:
   plan:
   - get: project
     trigger: true
-  - get: build-artifact
   - task: build
     file: project/ci/tasks/build.yml
   - put: build-artifact
