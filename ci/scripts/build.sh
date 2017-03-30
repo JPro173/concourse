@@ -2,6 +2,8 @@
 
 set -eux
 
+rm -rf artifact
+
 cp -r project artifact
 
 cd artifact
