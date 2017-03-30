@@ -17,8 +17,6 @@ jobs:
   plan:
   - get: project
     trigger: true
-  - task: test
-    file: project/ci/tasks/test.yml
   - get: build-artifact
     params:
       skip_download: true
@@ -26,7 +24,7 @@ jobs:
     file: project/ci/tasks/build.yml
   - put: build-artifact
     params:
-      build: build-artifact/Dockerfile
+      build: build-artifact
       cache: true
   - task: deploy
     file: project/ci/tasks/deploy.yml
