@@ -2,10 +2,10 @@
 
 set -eux
 
-mkdir build-artifact
+mkdir artifact
 
-cp -fr project/* build-artifact
+cp -fr project/* artifact
 
-cd build-artifact
+cd artifact
 pwd
 ls -lah
