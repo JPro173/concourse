@@ -7,9 +7,9 @@ resources:
   type: docker-image
   source:
     repository: injectyy/counter
-    username: injectyy
-    password: {{ pk }}
     tag: latest
+    username: injectyy
+    password: {{password}}
 
 
 jobs:
@@ -19,15 +19,15 @@ jobs:
     trigger: true
   - task: test
     file: project/ci/tasks/test.yml
+  - task: build
+    file: project/ci/tasks/build.yml
   - put: build-artifact
     params:
       tag: latest
-  - task: build
-    file: project/ci/tasks/build.yml
   - task: deploy
     file: project/ci/tasks/deploy.yml
     params:
-        PASSWORD: {{password}}
+        PK: {{pk}}
         HOST: {{host}}
         PORT: {{port}}
   - task: smoke-test
