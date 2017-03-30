@@ -8,7 +8,7 @@ printf "$blue[+] Done$none"
 
 printf "$blue[+] Stopping old container$none"
 docker stop prod > /dev/null 2>&1
-docker rm prod > /dev/null 2>&1
+docker rename prod prod_last
 printf "$blue[+] Done$none"
 
 printf "$blue[+] Running docker image$none"
