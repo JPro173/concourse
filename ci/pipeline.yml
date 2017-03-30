@@ -21,11 +21,13 @@ jobs:
     file: project/ci/tasks/test.yml
   - get: build-artifact
     params:
-      build: .
-      cache: true
+      skip_download: true
   - task: build
     file: project/ci/tasks/build.yml
   - put: build-artifact
+    params:
+      build: build-artifact/Dockerfile
+      cache: true
   - task: deploy
     file: project/ci/tasks/deploy.yml
     params:
