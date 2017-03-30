@@ -27,7 +27,7 @@ else:
 @app.route('/')
 def hello():
     count = redis.incr('hits')
-    return 'Hello World! I have been seen {} times.\n'.format(count)
+    return 'Hello World! I\'ve been seen {} times.\n'.format(count)
 
 if __name__ == "__main__":
      app.run(host="0.0.0.0", port=PORT, debug=True)
