@@ -2,9 +2,7 @@
 
 set -eux
 
-cp -r project artifact-tmp
-
-mv artifact-tmp artifact
+cp -fr project/* artifact
 
 cd artifact
 pwd
