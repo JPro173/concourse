@@ -20,7 +20,9 @@ jobs:
   - task: test
     file: project/ci/tasks/test.yml
   - get: build-artifact
-    build: ./
+    params:
+      build: .
+      cache: true
   - task: build
     file: project/ci/tasks/build.yml
   - put: build-artifact
